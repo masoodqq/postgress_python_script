@@ -40,10 +40,9 @@ Dataset is in the following JSON files.
   <span class="pl-s"><span class="pl-pds">"</span>userAgent<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span><span class="pl-cce">\"</span>Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.143 Safari/537.36<span class="pl-cce">\"</span><span class="pl-pds">"</span></span>,
   <span class="pl-s"><span class="pl-pds">"</span>userId<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>101<span class="pl-pds">"</span></span>
 }</pre></div>
-<p>The data in above files is covnerted into the follwoing data model.</p></br>
+<p>The data in above files is covnerted into the follwoing data model.</p>
 <h3>Entity Relationship Diagram</h3></br>
 
 <img src="/postgress_ERD.png" alt="ERD" style="max-width:100%;">
 
 <h3></h3>
-
