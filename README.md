@@ -305,4 +305,5 @@ Following files are used in the ETL process </br>
 After setting up the environment on my local PC</br>
 I first run the script <code>create_tables.py</code> that creates the database and </br>
 then run the <code>etl.py</code> to insert the data.</br>
-<code>sql_queries.py</code> contains CREATE, DROP and INSERT commands.
+<code>sql_queries.py</code> contains CREATE, DROP and INSERT commands.</br>
+The dataset for the project is in the data folder.
