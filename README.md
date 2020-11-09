@@ -297,11 +297,12 @@ installed psycopg2 python driver for PostgreSQL from https://psycopg.org/ </br>
 installed pandas from https://pandas.pydata.org/docs/index.html version 1.1.4</br>
 installed numpy from https://numpy.org/ version 1.19.3</br>
 
+Following files are used in the ETL process </br>
 <code>create_tables.py</code></br>
 <code>etl.py</code></br>
 <code>sql_queries.py</code></br>
 
 After setting up the environment on my local PC</br>
 I first run the script <code>create_tables.py</code> that creates the database and </br>
-then run the <code>etl.py</code> to insert the data.
+then run the <code>etl.py</code> to insert the data.</br>
 <code>sql_queries.py</code> contains CREATE, DROP and INSERT commands.
