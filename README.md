@@ -293,9 +293,9 @@ From the data log dataset file the following tables are created.
 <hr style="width:50%;text-align:left;margin-left:0">
 <h3>ETL Process</h3>
 <p> I developed this project using Visual Studio Code, python 3.9.0</br>
-installed psycopg2 A Python driver for PostgreSQL Homepage: https://psycopg.org/
-installed pandas from https://pandas.pydata.org/docs/index.html version 1.1.4
-installed numpy from https://numpy.org/ version 1.19.3
+installed psycopg2 python driver for PostgreSQL from https://psycopg.org/ </br>
+installed pandas from https://pandas.pydata.org/docs/index.html version 1.1.4</br>
+installed numpy from https://numpy.org/ version 1.19.3</br>
 
 <code>create_tables.py</code></br>
 <code>etl.py</code></br>
