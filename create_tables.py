@@ -4,8 +4,8 @@ from sql_queries import create_table_queries, drop_table_queries#, insert_table_
 
 def create_database():
     """
-    - Creates and connects to the sparkifydb
-    - Returns the connection and cursor to sparkifydb
+    - Creates and connects to the imusicdb
+    - Returns the connection and cursor to imusicdb
     """
     
     # connect to default database
@@ -13,15 +13,15 @@ def create_database():
     conn.set_session(autocommit=True)
     cur = conn.cursor()
     
-    # create sparkify database with UTF8 encoding
-    cur.execute("DROP DATABASE IF EXISTS sparkifydb")
-    cur.execute("CREATE DATABASE sparkifydb WITH ENCODING 'utf8' TEMPLATE template0")
+    # create imusic database with UTF8 encoding
+    cur.execute("DROP DATABASE IF EXISTS imusicdb")
+    cur.execute("CREATE DATABASE imusicdb WITH ENCODING 'utf8' TEMPLATE template0")
 
     # close connection to default database
     conn.close()    
     
-    # connect to sparkify database
-    conn = psycopg2.connect("host=127.0.0.1 dbname=sparkifydb user=student password=student")
+    # connect to imusic database
+    conn = psycopg2.connect("host=127.0.0.1 dbname=imusicdb user=student password=student")
     cur = conn.cursor()
     
     return cur, conn
@@ -51,9 +51,9 @@ def insert_tables(cur, conn):
 
 def main():
     """
-    - Drops (if exists) and Creates the sparkify database. 
+    - Drops (if exists) and Creates the imusic database. 
     
-    - Establishes connection with the sparkify database and gets
+    - Establishes connection with the imusic database and gets
     cursor to it.  
     
     - Drops all the tables.  
