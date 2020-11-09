@@ -292,6 +292,11 @@ From the data log dataset file the following tables are created.
 <img src="/postgress_ERD.png" alt="ERD" style="max-width:100%;">
 <hr style="width:50%;text-align:left;margin-left:0">
 <h3>ETL Process</h3>
+<p> I developed this project using Visual Studio Code, python 3.9.0</br>
+installed psycopg2 A Python driver for PostgreSQL Homepage: https://psycopg.org/
+installed pandas from https://pandas.pydata.org/docs/index.html version 1.1.4
+installed numpy from https://numpy.org/ version 1.19.3
+
 <code>create_tables.py</code></br>
 <code>etl.py</code></br>
 <code>sql_queries.py</code></br>
