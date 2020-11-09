@@ -8,7 +8,7 @@ Dataset is in the following JSON files.
 <p>The song dataset contains information about the song and artrist of that song.</br>
 The files are partitioned by the first three letters of each song's track ID.</br>
 For example, here are filepaths to two files in this dataset.<br>
-song_data/A/B/C/TRABCEI128F424C983.json song_data/A/A/B/TRAABJL12903CDCF1A.json
+song_data/A/B/C/TRABCEI128F424C983.json & song_data/A/A/B/TRAABJL12903CDCF1A.json
 
 And below is an example of what a single song file, TRAABJL12903CDCF1A.json, looks like.
 
@@ -29,7 +29,7 @@ And below is an example of what a single song file, TRAABJL12903CDCF1A.json, loo
 
 From the above file following 2 tables are created.
 
-</h4>
+<h4>Songs</h4>
 <p>Songs in music database.</p>
 <table>
 <thead>
