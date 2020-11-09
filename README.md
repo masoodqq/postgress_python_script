@@ -300,3 +300,8 @@ installed numpy from https://numpy.org/ version 1.19.3</br>
 <code>create_tables.py</code></br>
 <code>etl.py</code></br>
 <code>sql_queries.py</code></br>
+
+After setting up the environment on my local PC</br>
+I first run the script <code>create_tables.py</code> that creates the database and </br>
+then run the <code>etl.py</code> to insert the data.
+<code>sql_queries.py</code> contains CREATE, DROP and INSERT commands.
