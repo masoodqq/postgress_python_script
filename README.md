@@ -27,7 +27,7 @@ And below is an example of what a single song file, TRAABJL12903CDCF1A.json, loo
   <span class="pl-s"><span class="pl-pds">"</span>year<span class="pl-pds">"</span></span>: <span class="pl-c1">0</span>
 }</pre></div>
 
-From the above file following 2 tables are created.
+Following 2 tables are created from the song data file.
 
 <h4>Songs</h4>
 <p>Songs in music database.</p>
@@ -109,6 +109,11 @@ From the above file following 2 tables are created.
 <p>Primary key: artist_id</p>
 
 <h3>Log dataset</h3> </br>
+The log files in the dataset are partitioned by year and month. For example, here are filepaths to two files in this dataset.
+
+log_data/2018/11/2018-11-12-events.json log_data/2018/11/2018-11-13-events.json
+
+And below is an example of what the data in a log file, 2018-11-12-events.json, looks like.
 
 <div class="highlight highlight-source-json"><pre>{
   <span class="pl-s"><span class="pl-pds">"</span>artist<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>Survivor<span class="pl-pds">"</span></span>,
@@ -130,6 +135,8 @@ From the above file following 2 tables are created.
   <span class="pl-s"><span class="pl-pds">"</span>userAgent<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span><span class="pl-cce">\"</span>Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.143 Safari/537.36<span class="pl-cce">\"</span><span class="pl-pds">"</span></span>,
   <span class="pl-s"><span class="pl-pds">"</span>userId<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>101<span class="pl-pds">"</span></span>
 }</pre></div>
+
+The data log file is modeled in the following tables.
 
 <h4><a id="user-content-time" class="anchor" aria-hidden="true" href="#time"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Time</h4>
 <p>Timestamps of records in songplays broken down into specific units.</p>
