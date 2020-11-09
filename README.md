@@ -196,8 +196,7 @@ From the data log dataset file the following tables are created.
 <th>Type</th>
 <th>Nullable</th>
 </tr>
-</thead>
-<tbody>
+</thead><tbody>
 <tr>
 <td>user_id</td>
 <td>integer</td>
@@ -291,5 +290,8 @@ From the data log dataset file the following tables are created.
 <h3>Entity Relationship Diagram</h3>
 
 <img src="/postgress_ERD.png" alt="ERD" style="max-width:100%;">
-
-<h3></h3>
+<hr style="width:50%;text-align:left;margin-left:0">
+<h3>ETL Process</h3>
+<code>create_tables.py</code>
+<code>etl.py</code>
+<code>sql_queries.py</code>
