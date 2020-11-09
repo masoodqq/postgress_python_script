@@ -4,7 +4,16 @@
 Dataset is in the following JSON files.
 </p>
 
-<h3>Song dataset</h3> </br>
+<h3>Song dataset</h3>
+<p>The song dataset contains information about the song and artrist of that song.</br>
+The files are partitioned by the first three letters of each song's track ID.</br>
+For example, here are filepaths to two files in this dataset.<br>
+song_data/A/B/C/TRABCEI128F424C983.json song_data/A/A/B/TRAABJL12903CDCF1A.json
+
+And below is an example of what a single song file, TRAABJL12903CDCF1A.json, looks like.
+
+</p>
+
 <div class="highlight highlight-source-json"><pre>{
   <span class="pl-s"><span class="pl-pds">"</span>num_songs<span class="pl-pds">"</span></span>: <span class="pl-c1">1</span>,
   <span class="pl-s"><span class="pl-pds">"</span>artist_id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>ARGSJW91187B9B1D6B<span class="pl-pds">"</span></span>,
@@ -17,6 +26,87 @@ Dataset is in the following JSON files.
   <span class="pl-s"><span class="pl-pds">"</span>duration<span class="pl-pds">"</span></span>: <span class="pl-c1">218.77506</span>,
   <span class="pl-s"><span class="pl-pds">"</span>year<span class="pl-pds">"</span></span>: <span class="pl-c1">0</span>
 }</pre></div>
+
+From the above file following 2 tables are created.
+
+</h4>
+<p>Songs in music database.</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>Nullable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>song_id</td>
+<td>character varying(18)</td>
+<td>not null</td>
+</tr>
+<tr>
+<td>title</td>
+<td>character varying</td>
+<td>not null</td>
+</tr>
+<tr>
+<td>artist_id</td>
+<td>character varying(18)</td>
+<td>not null</td>
+</tr>
+<tr>
+<td>year</td>
+<td>integer</td>
+<td>not null</td>
+</tr>
+<tr>
+<td>duration</td>
+<td>double precision</td>
+<td>not null</td>
+</tr>
+</tbody>
+</table>
+<p>Primary key: song_id</p>
+<h4><a id="user-content-artists" class="anchor" aria-hidden="true" href="#artists"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Artists</h4>
+<p>Artists in music database.</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>Nullable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>artist_id</td>
+<td>character varying(18)</td>
+<td>not null</td>
+</tr>
+<tr>
+<td>name</td>
+<td>character varying</td>
+<td>not null</td>
+</tr>
+<tr>
+<td>location</td>
+<td>character varying</td>
+<td>not null</td>
+</tr>
+<tr>
+<td>latitude</td>
+<td>double precision</td>
+<td></td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>double precision</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Primary key: artist_id</p>
 
 <h3>Log dataset</h3> </br>
 
@@ -40,8 +130,58 @@ Dataset is in the following JSON files.
   <span class="pl-s"><span class="pl-pds">"</span>userAgent<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span><span class="pl-cce">\"</span>Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.143 Safari/537.36<span class="pl-cce">\"</span><span class="pl-pds">"</span></span>,
   <span class="pl-s"><span class="pl-pds">"</span>userId<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>101<span class="pl-pds">"</span></span>
 }</pre></div>
+
+<h4><a id="user-content-time" class="anchor" aria-hidden="true" href="#time"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Time</h4>
+<p>Timestamps of records in songplays broken down into specific units.</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>Nullable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>start_time</td>
+<td>timestamp without time zone</td>
+<td>not null</td>
+</tr>
+<tr>
+<td>hour</td>
+<td>integer</td>
+<td>not null</td>
+</tr>
+<tr>
+<td>day</td>
+<td>integer</td>
+<td>not null</td>
+</tr>
+<tr>
+<td>week</td>
+<td>integer</td>
+<td>not null</td>
+</tr>
+<tr>
+<td>month</td>
+<td>integer</td>
+<td>not null</td>
+</tr>
+<tr>
+<td>year</td>
+<td>integer</td>
+<td>not null</td>
+</tr>
+<tr>
+<td>weekday</td>
+<td>integer</td>
+<td>not null</td>
+</tr>
+</tbody>
+</table>
+
 <p>The data in above files is covnerted into the follwoing data model.</p>
-<h3>Entity Relationship Diagram</h3></br>
+<h3>Entity Relationship Diagram</h3>
 
 <img src="/postgress_ERD.png" alt="ERD" style="max-width:100%;">
 
