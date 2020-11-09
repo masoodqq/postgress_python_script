@@ -292,6 +292,6 @@ From the data log dataset file the following tables are created.
 <img src="/postgress_ERD.png" alt="ERD" style="max-width:100%;">
 <hr style="width:50%;text-align:left;margin-left:0">
 <h3>ETL Process</h3>
-<code>create_tables.py</code>
-<code>etl.py</code>
-<code>sql_queries.py</code>
+<code>create_tables.py</code></br>
+<code>etl.py</code></br>
+<code>sql_queries.py</code></br>
